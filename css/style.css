@@ -1,0 +1,85 @@
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+#side-menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+#main {
+  flex: 3;
+}
+#side-menu section {
+  flex: 1;
+}
+
+.favourite {
+  font-weight: bold;
+  color: blue;
+}
+
+td {
+  width: 150px;
+  padding: 5px;
+}
+th {
+  padding: 10px;
+}
+
+#top-menu-bar {
+  color: white;
+  text-align: center;
+  background-color: #334455;
+  margin: 0;
+  padding: 2px;
+}
+
+#top-menu-bar li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+#top-menu-bar a {
+  display: inline-block;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: 0.7s;
+}
+
+#top-menu-bar a:visited {
+  color: white;
+}
+.selected,
+#top-menu-bar a:hover {
+  color: #334455 !important;
+  background: white;
+}
+
+table,
+table td,
+table th {
+  border: 1px solid black;
+}
+
+td.favourite {
+  font-weight: normal;
+  /* color: red; */
+}
+#job-title {
+  color: green;
+  text-align: right;
+}
