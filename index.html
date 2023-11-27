@@ -8,9 +8,15 @@
   </head>
   <body>
     <header>
-      <h1>Ciuban Eduard</h1>
-      <img height="100" src="images/test.jpg" alt="selfie" />
-      <p id="job-title">Student @ FastTrackIT</p>
+      <div id="heading-section">
+        <div>
+          <img height="100" src="images/test.jpg" alt="selfie" />
+        </div>
+        <div>
+          <h1>Ciuban Eduard</h1>
+          <p id="job-title">Co-founder of DailyOCR</p>
+        </div>
+      </div>
     </header>
     <ul id="top-menu-bar">
       <li><a id="home" class="nav-item selected">Home</a></li>
@@ -23,7 +29,7 @@
         <section>
           <form action="secretara.html">
             <h2>Contact</h2>
-            <div>
+            <div class="input-group">
               <label for="userEmail">Email</label>
               <input
                 type="email"
@@ -33,8 +39,7 @@
                 required
               />
             </div>
-
-            <div>
+            <div class="input-group">
               <label for="userName">Your Name</label>
               <input
                 type="text"

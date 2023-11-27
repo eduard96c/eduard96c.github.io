@@ -7,8 +7,8 @@ function nav() {
 
 function _handleNavClick() {
   selected = document.querySelector(".selected");
-  current_conainer = document.querySelector("#main-" + selected.id);
-  next_container = document.querySelector("#main-" + this.id);
+  current_conainer = document.getElementById("main-" + selected.id);
+  next_container = document.getElementById("main-" + this.id);
   if (this !== selected) {
     current_conainer.classList.add("d-none");
     next_container.classList.remove("d-none");

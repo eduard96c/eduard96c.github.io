@@ -7,18 +7,51 @@ body {
   display: flex;
   flex-direction: column;
 }
+header {
+  padding: 5px;
+  background-color: #1a1d27;
+  color: white;
+}
+#heading-section {
+  padding-top: 10px;
+  display: flex;
+}
+#heading-section div:nth-child(2) {
+  padding-left: 10px;
+}
+#heading-section img {
+  border-radius: 90px;
+}
 #content {
   flex: 1;
   display: flex;
   flex-direction: row;
 }
 #side-menu {
+  padding: 10px;
+  background-color: #d6d6e9;
+  border-right: 2px solid black;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+#side-menu .input-group input {
+  max-width: 70%;
+  padding: 5px;
+  border: 1px solid gray;
+  margin-bottom: 10px;
+}
 #main {
+  padding: 10px;
   flex: 3;
+  background-color: #d6d6e9;
+}
+#main h2 {
+  margin-top: 0px;
 }
 #side-menu section {
   flex: 1;
@@ -40,7 +73,7 @@ th {
 #top-menu-bar {
   color: white;
   text-align: center;
-  background-color: #334455;
+  background-color: #2a80d7;
   margin: 0;
   padding: 2px;
 }
@@ -49,6 +82,9 @@ th {
   display: inline-block;
   margin: 0;
   padding: 0;
+}
+#top-menu-bar li:hover {
+  cursor: pointer;
 }
 
 #top-menu-bar a {
@@ -80,8 +116,9 @@ td.favourite {
   /* color: red; */
 }
 #job-title {
-  color: green;
+  color: white;
   text-align: right;
+  margin: 0;
 }
 
 .d-none {
