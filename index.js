@@ -7,10 +7,10 @@ function nav() {
 
 function _handleNavClick() {
   selected = document.querySelector(".selected");
-  current_conainer = document.getElementById("main-" + selected.id);
+  current_container = document.getElementById("main-" + selected.id);
   next_container = document.getElementById("main-" + this.id);
   if (this !== selected) {
-    current_conainer.classList.add("d-none");
+    current_container.classList.add("d-none");
     next_container.classList.remove("d-none");
     selected.classList.remove("selected");
     this.classList.add("selected");
