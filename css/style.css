@@ -83,3 +83,7 @@ td.favourite {
   color: green;
   text-align: right;
 }
+
+.d-none {
+  display: none !important;
+}

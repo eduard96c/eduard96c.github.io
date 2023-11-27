@@ -1,9 +1,3 @@
-var employed = true;
-console.log(employed);
-
-var job = document.getElementById("job-title");
-console.log(job);
-
 function nav() {
   var btns = document.querySelectorAll(".nav-item");
   btns.forEach(function (elem) {
