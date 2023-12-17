@@ -10,23 +10,23 @@
     <header>
       <div id="heading-section">
         <div>
-          <img height="100" src="images/test.jpg" alt="selfie" />
+          <img height="150" src="images/poza.jpg" alt="selfie" />
         </div>
         <div>
           <h1>Ciuban Eduard</h1>
-          <p id="job-title">Co-founder of DailyOCR</p>
+          <p id="job-title">Freelancer - Web developer</p>
         </div>
       </div>
     </header>
     <ul id="top-menu-bar">
-      <li><a id="home" class="nav-item selected">Home</a></li>
+      <li><a id="home" class="nav-item">Home</a></li>
       <li><a id="skills" class="nav-item">Skills</a></li>
       <li><a id="projects" class="nav-item">Projects</a></li>
       <li><a id="languages" class="nav-item">Languages</a></li>
     </ul>
     <section id="content">
       <div id="side-menu">
-        <section>
+        <section id="contact-section" class="side-menu-container">
           <form action="secretara.html">
             <h2>Contact</h2>
             <div class="input-group">
@@ -52,29 +52,79 @@
             <button type="submit">Send</button>
           </form>
         </section>
-        <section>M2</section>
+        <section class="side-menu-container">So empty...</section>
       </div>
       <div id="main">
         <div id="main-home" class="page">
           <h2>HOME</h2>
+          <p class="home-para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+            aspernatur iure, delectus, dicta praesentium nihil, maiores eos
+            perferendis quam enim ipsa esse! Cumque in rerum deserunt voluptate,
+            facere ea quo?
+          </p>
         </div>
-        <div id="main-skills" class="page d-none">
+        <div id="main-skills" class="page">
           <h2>Skills</h2>
+          <div class="skills-list-container">
+            <ul>
+              <li class="list-heading">
+                <span style=""> Front End</span>
+              </li>
+              <li>
+                <span class="favourite">JavaScript</span>
+                <span> - Dynamic pages, AJAX server requests</span>
+              </li>
+              <li>
+                <span> HTML </span>
+                <span> - Webpage strcuture</span>
+              </li>
+              <li>
+                <span> CSS </span>
+                <span> - Page styling, animations</span>
+              </li>
+              <li class="list-heading">
+                <span> Back End</span>
+              </li>
+              <li>
+                <span class="favourite">PHP</span>
+                <span> - server side scripting, database manipulation</span>
+              </li>
+              <li>
+                <span class="favourite">MYSQL</span>
+                <span> - Database creation, records manipulation.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="main-projects" class="page">
+          <h2>PROJECTS</h2>
           <ul>
-            <li class="favourite">PHP</li>
-            <li class="favourite">JS</li>
-            <li class="favourite">C++</li>
-            <li>HTML</li>
-            <li>CSS</li>
+            <li class="project-container">
+              <a href="https://dailyocr.com"> DailyOCR </a>
+              <span> OCR, PDF tools, SEO tools and more! </span>
+            </li>
+            <li class="project-container">
+              <a
+                href="https://github.com/fprophet/keywords-density-checker/blob/main"
+                target="_blank"
+              >
+                Keyword Density Calculator
+              </a>
+              <span>
+                PHP Class - used to calculate a web page word and keyword
+                density.</span
+              >
+            </li>
+            <li class="project-container">
+              <a href="https://github.com/fprophet/Diet-calculator">
+                Diet Calculator
+              </a>
+              <span> JavaScript Project - calories calculator. </span>
+            </li>
           </ul>
         </div>
-        <div id="main-projects" class="page d-none">
-          <h2>PROJECTS</h2>
-
-          <a href="https://dailyocr.com"> DailyOCR </a>
-          <span> - OCR, PDF tools, SEO tools and more! </span>
-        </div>
-        <div id="main-languages" class="page d-none">
+        <div id="main-languages" class="page">
           <h2>Known Languages</h2>
           <table>
             <tr>
@@ -88,6 +138,10 @@
             <tr>
               <td>English</td>
               <td>Profesional</td>
+            </tr>
+            <tr>
+              <td>Hungarian</td>
+              <td>Low Level</td>
             </tr>
           </table>
         </div>
