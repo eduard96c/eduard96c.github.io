@@ -1,6 +1,6 @@
 active_page = "home";
-current_container = document.getElementById("main-" + active_page);
-selected = document.getElementById(active_page);
+current_container = document.getElementById(active_page);
+selected = document.querySelector("[data-page='" + active_page + "']");
 
 function nav() {
   current_container.classList.add("d-block");
@@ -13,13 +13,13 @@ function nav() {
 }
 
 function _handleNavClick(e) {
-  current_container = document.getElementById("main-" + active_page);
+  current_container = document.getElementById(active_page);
 
-  active_page = e.target.id;
+  active_page = e.target.dataset.page;
 
   selected = document.querySelector(".selected");
 
-  next_container = document.getElementById("main-" + active_page);
+  next_container = document.getElementById(active_page);
 
   if (e.target !== selected) {
     current_container.classList.remove("d-block");
