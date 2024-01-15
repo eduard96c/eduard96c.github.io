@@ -1,6 +1,10 @@
+function $(selector) {
+  return document.querySelector(selector);
+}
+
 active_page = "home";
 current_container = document.getElementById(active_page);
-selected = document.querySelector("[data-page='" + active_page + "']");
+selected = $("[data-page='" + active_page + "']");
 
 function nav() {
   current_container.classList.add("d-block");
@@ -17,7 +21,7 @@ function _handleNavClick(e) {
 
   active_page = e.target.dataset.page;
 
-  selected = document.querySelector(".selected");
+  selected = $(".selected");
 
   next_container = document.getElementById(active_page);
 
@@ -30,14 +34,22 @@ function _handleNavClick(e) {
 }
 
 function showSkills() {
-  var ul = document.querySelector("#skills ul");
-  var skills = [
-    { name: "HTML", endorsments: 3 },
-    { name: "CSS", endorsments: 4 },
-    { name: "JS", endorsments: 6 },
-  ];
+  var ul = $("#skills ul");
+  var skills = [];
   var response = skills.map(function (skill) {
-    return "<li>" + skill.name + "-<span>" + skill.endorsments + "</span></li>";
+    if (skill.favourite) {
+      return (
+        "<li class='favourite'>" +
+        skill.name +
+        "-<span>" +
+        skill.endorsments +
+        "</span></li>"
+      );
+    } else {
+      return (
+        "<li>" + skill.name + "-<span>" + skill.endorsments + "</span></li>"
+      );
+    }
   });
   console.log(response);
   ul.innerHTML = response.join("");
