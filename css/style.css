@@ -121,7 +121,7 @@ header {
   flex: 1;
   margin-top: 0px;
 }
-.list-heading {
+#skill .list-heading {
   font-weight: bold;
   border-bottom: 1px solid #6c757d;
   padding: 0;

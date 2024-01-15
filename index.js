@@ -29,4 +29,18 @@ function _handleNavClick(e) {
   }
 }
 
+function showSkills() {
+  var ul = document.querySelector("#skills ul");
+  var skills = [
+    { name: "HTML", endorsments: 3 },
+    { name: "CSS", endorsments: 4 },
+    { name: "JS", endorsments: 6 },
+  ];
+  var response = skills.map(function (skill) {
+    return "<li>" + skill.name + "-<span>" + skill.endorsments + "</span></li>";
+  });
+  console.log(response);
+  ul.innerHTML = response.join("");
+}
+showSkills();
 nav();
