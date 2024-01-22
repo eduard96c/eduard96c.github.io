@@ -2,7 +2,7 @@ function $(selector) {
   return document.querySelector(selector);
 }
 
-active_page = "home";
+active_page = "about";
 current_container = document.getElementById(active_page);
 selected = $("[data-page='" + active_page + "']");
 
@@ -26,6 +26,7 @@ function _handleNavClick(e) {
   next_container = document.getElementById(active_page);
 
   if (e.target !== selected) {
+    console.log(current_container);
     current_container.classList.remove("d-block");
     next_container.classList.add("d-block");
     selected.classList.remove("selected");

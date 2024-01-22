@@ -9,21 +9,52 @@ body {
   background-color: #f5f5f5;
 }
 header {
-  padding: 5px;
-  background-color: #1a1d27;
+  /* padding: 5px; */
+  background-color: #2a3e52;
   color: white;
 }
 #heading-section {
   padding: 10px 0px 10px 50px;
   display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100px;
 }
-#heading-section div:nth-child(2) {
-  padding-left: 10px;
+
+#heading-nav {
+  position: absolute;
+  left: 100px;
+  top: 10px;
+  width: 50%;
 }
+#heading-nav div:first-child {
+  display: flex;
+}
+#heading-nav div:last-child {
+  margin-left: 100px;
+}
+#heading-nav img {
+  position: relative;
+  z-index: 99;
+}
+#heading-nav ul {
+  color: white;
+  text-align: center;
+  background-color: #2a80d7;
+  margin: 0;
+  padding: 2px;
+  position: absolute;
+  padding: 5px 30px 5px 100px;
+  top: 110px;
+  left: 110px;
+  border-bottom-right-radius: 20px;
+}
+
 #heading-section img {
   border-radius: 90px;
-  padding: 5px;
-  border: 1px solid #2a80d7;
+  padding: 3px;
+  background-color: #2a80d7;
+  /* border: 1px solid #2a80d7; */
 }
 .project-container {
   font-size: 18px;
@@ -77,6 +108,7 @@ header {
   flex-direction: row;
   width: 1300px;
   margin: 0 auto;
+  margin-top: 50px;
 }
 #side-menu {
   flex: 1;
@@ -143,8 +175,38 @@ header {
 #skills ul li:last-child {
   margin: 0 10px 0 10px;
 }
-.home-para {
+#about div {
+  display: flex;
+  height: 100%;
+}
+#about section {
+  flex: 1;
+  padding: 15px;
+}
+#about h2 {
+  text-align: start;
+}
+#about section:first-child p {
   font-size: 18px;
+}
+#about section:first-child p span {
+  font-weight: bold;
+}
+#about section table {
+  width: 80%;
+  border: 0;
+}
+#about section table td {
+  /* width: 100%; */
+  border: 0;
+  font-size: 18px;
+  /* text-align: center; */
+}
+#about section table tr {
+  /* border-bottom: 1px solid; */
+}
+#about .info-key {
+  font-weight: bold;
 }
 .page {
   background-color: #fff;
@@ -175,14 +237,6 @@ td {
 }
 th {
   padding: 10px;
-}
-
-#top-menu-bar {
-  color: white;
-  text-align: center;
-  background-color: #2a80d7;
-  margin: 0;
-  padding: 2px;
 }
 
 #top-menu-bar li {
@@ -221,7 +275,7 @@ table th {
 table th {
   background-color: #057988;
 }
-table {
+#languages table {
   border-collapse: collapse;
   margin: 0 auto;
   width: 60%;
@@ -242,4 +296,35 @@ td.favourite {
 }
 .d-block {
   display: block;
+}
+
+footer {
+  height: 150px;
+  background-color: #2a3e52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+footer span {
+  font-size: 20px;
+}
+footer ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+footer ul li {
+  margin-left: 15px;
+  font-size: 18px;
+}
+footer footer div {
+  display: flex;
+}
+footer a:visited {
+  color: white;
+}
+footer i {
+  /* font-size: 20px !important; */
 }
