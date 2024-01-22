@@ -2,7 +2,7 @@ function $(selector) {
   return document.querySelector(selector);
 }
 
-active_page = "skills";
+active_page = "about";
 current_container = document.getElementById(active_page);
 selected = $("[data-page='" + active_page + "']");
 
