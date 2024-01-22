@@ -67,11 +67,8 @@ header {
 #projects ul {
   list-style-type: none;
   width: 90%;
-  margin: 0 auto;
-  /* border: 2px solid #d3d5d8; */
-  /* background-color: #f8f8f8; */
-  /* padding: 0 20px 20px 20px; */
-  /* margin-left: 20px; */
+  padding-left: 0;
+
   border-radius: 5px;
   flex: 1;
   margin-top: 0px;
@@ -115,7 +112,7 @@ header {
   width: 1300px;
   margin: 0 auto;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 #side-menu {
   flex: 1;
@@ -147,14 +144,32 @@ header {
   flex: 3;
   display: flex;
 }
+.list-select {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+.list-select li {
+  margin-top: 10px;
+  color: #9a9a9a;
+}
+.list-select li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.selected-list::after {
+  margin-left: 10px;
+  content: "\00BB";
+}
 .skills-list-container {
   display: flex;
   flex-direction: column;
 }
-#skills ul {
+#skills .skill-list {
+  display: none;
   list-style-type: none;
   width: 90%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 0 20px 20px 20px;
   border-radius: 5px;
   flex: 1;
@@ -168,18 +183,18 @@ header {
   font-size: 20px !important;
 }
 
-#skills ul li {
+#skills .skill-list li {
   font-size: 18px;
   padding: 10px;
 }
-#skills ul li:not(:first-child):not(.list-heading) {
-  border: 1px solid #d8d8d8;
+#skills .skill-list li:not(:first-child):not(.list-heading) {
+  border-bottom: 1px solid #d8d8d8;
   margin: 0 10px 0 10px;
   margin-top: 15px;
   border-radius: 5px;
-  box-shadow: 0px 6px 5px -6px rgba(0, 0, 0, 0.53);
+  /* box-shadow: 0px 6px 5px -6px rgba(0, 0, 0, 0.53); */
 }
-#skills ul li:last-child {
+#skills .skill-list li:last-child {
   margin: 0 10px 0 10px;
 }
 #about div:first-child {
@@ -270,7 +285,17 @@ header {
   display: none;
   flex: 1;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
-  height: 100%;
+  max-height: 430px;
+  overflow: auto;
+}
+
+.page section:first-child {
+  flex: 1;
+}
+
+.page section:last-child {
+  flex: 4;
+  border-left: 2px solid #9a9a9a;
   overflow: auto;
 }
 .page h2 {
@@ -350,8 +375,8 @@ td.favourite {
 .d-none {
   display: none;
 }
-.d-block {
-  display: block;
+.d-flex {
+  display: flex;
 }
 
 footer {

@@ -1,5 +1,19 @@
 [
-  { "name": "HTML", "endorsments": 3 },
-  { "name": "CSS", "endorsments": 4 },
-  { "name": "JS", "endorsments": 6, "favourite": true }
+  {
+    "type": "Programming",
+    "main": true,
+    "list": [
+      { "name": "HTML", "details": "test details" },
+      { "name": "CSS", "details": "test details" },
+      { "name": "JS", "details": "test details", "favourite": true }
+    ]
+  },
+  {
+    "type": "Computers",
+    "list": [{ "name": "Systems", "details": "test details" }]
+  },
+  {
+    "type": "Electronics",
+    "list": [{ "name": "PCB", "details": "test details" }]
+  }
 ]

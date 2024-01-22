@@ -39,7 +39,7 @@
 
     <section id="content">
       <div id="main">
-        <div id="about" class="page d-block">
+        <div id="about" class="page">
           <div>
             <section>
               <h2>About</h2>
@@ -56,7 +56,6 @@
                 magnam totam tenetur quasi laborum!
               </p>
             </section>
-            <hr />
             <section>
               <h2>Basic info</h2>
               <table>
@@ -106,9 +105,22 @@
           </div>
         </div>
         <div id="skills" class="page">
-          <h2>Skills</h2>
-          <div class="skills-list-container">
-            <ul>
+          <section>
+            <h2>Skills</h2>
+            <ul class="list-select">
+              <li data-type="programming" class="selected-list">Programming</li>
+              <li data-type="computers">Computers</li>
+              <li data-type="electronics">Electronics</li>
+            </ul>
+          </section>
+
+          <section class="skills-list-container">
+            <!-- <ul
+              id="programming"
+              class="data-list skill-list"
+              style="display: block"
+            >
+              <h3>Programming Skills</h3>
               <li class="list-heading">
                 <span style=""> Front End</span>
               </li>
@@ -135,60 +147,90 @@
                 <span class="favourite">MYSQL</span>
                 <span> - Database creation, records manipulation.</span>
               </li>
+              <li>
+                <span class="favourite">MYSQL</span>
+                <span> - Database creation, records manipulation.</span>
+              </li>
+              <li>
+                <span class="favourite">MYSQL</span>
+                <span> - Database creation, records manipulation.</span>
+              </li>
+              <li>
+                <span class="favourite">MYSQL</span>
+                <span> - Database creation, records manipulation.</span>
+              </li>
             </ul>
-          </div>
+            <ul id="computers" class="data-list skill-list">
+              <li class="list-heading">
+                <span style=""> COMPUTERS</span>
+              </li>
+            </ul>
+            <ul id="electronics" class="data-list skill-list">
+              <li class="list-heading">
+                <span style=""> ELECTRONICS</span>
+              </li>
+            </ul> -->
+          </section>
         </div>
         <div id="projects" class="page">
-          <h2>PROJECTS</h2>
-          <ul>
-            <li class="project-container">
-              <a href="https://dailyocr.com"> DailyOCR </a>
-              <span> OCR, PDF tools, SEO tools and more! </span>
-            </li>
-            <li class="project-container">
-              <a href="/blog"> Blog Template (ongoing) </a>
-              <span> A template of a blog website </span>
-            </li>
-            <li class="project-container">
-              <a
-                href="https://github.com/fprophet/keywords-density-checker/blob/main"
-                target="_blank"
-              >
-                Keyword Density Calculator
-              </a>
-              <span>
-                PHP Class - used to calculate a web page word and keyword
-                density.</span
-              >
-            </li>
-            <li class="project-container">
-              <a href="https://github.com/fprophet/Diet-calculator">
-                Diet Calculator
-              </a>
-              <span> JavaScript Project - calories calculator. </span>
-            </li>
-          </ul>
+          <section>
+            <h2>PROJECTS</h2>
+          </section>
+          <section>
+            <ul>
+              <li class="project-container">
+                <a href="https://dailyocr.com"> DailyOCR </a>
+                <span> OCR, PDF tools, SEO tools and more! </span>
+              </li>
+              <li class="project-container">
+                <a href="/blog"> Blog Template (ongoing) </a>
+                <span> A template of a blog website </span>
+              </li>
+              <li class="project-container">
+                <a
+                  href="https://github.com/fprophet/keywords-density-checker/blob/main"
+                  target="_blank"
+                >
+                  Keyword Density Calculator
+                </a>
+                <span>
+                  PHP Class - used to calculate a web page word and keyword
+                  density.</span
+                >
+              </li>
+              <li class="project-container">
+                <a href="https://github.com/fprophet/Diet-calculator">
+                  Diet Calculator
+                </a>
+                <span> JavaScript Project - calories calculator. </span>
+              </li>
+            </ul>
+          </section>
         </div>
         <div id="languages" class="page">
-          <h2>Known Languages</h2>
-          <table>
-            <tr>
-              <th>Language</th>
-              <th>Level</th>
-            </tr>
-            <tr>
-              <td class="favourite">Romanian</td>
-              <td>Native</td>
-            </tr>
-            <tr>
-              <td>English</td>
-              <td>Profesional</td>
-            </tr>
-            <tr>
-              <td>Hungarian</td>
-              <td>Low Level</td>
-            </tr>
-          </table>
+          <section>
+            <h2>Known Languages</h2>
+          </section>
+          <section>
+            <table>
+              <tr>
+                <th>Language</th>
+                <th>Level</th>
+              </tr>
+              <tr>
+                <td class="favourite">Romanian</td>
+                <td>Native</td>
+              </tr>
+              <tr>
+                <td>English</td>
+                <td>Profesional</td>
+              </tr>
+              <tr>
+                <td>Hungarian</td>
+                <td>Low Level</td>
+              </tr>
+            </table>
+          </section>
         </div>
       </div>
     </section>
