@@ -19,7 +19,9 @@
   },
   {
     "type": "Computers",
-    "list": [{ "name": "Systems", "details": "test details" }]
+    "list": [
+      { "name": "Systems", "details": "test details", "favourite": true }
+    ]
   },
   {
     "type": "Electronics",
