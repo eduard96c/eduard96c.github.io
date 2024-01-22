@@ -3,9 +3,18 @@
     "type": "Programming",
     "main": true,
     "list": [
-      { "name": "HTML", "details": "test details" },
-      { "name": "CSS", "details": "test details" },
-      { "name": "JS", "details": "test details", "favourite": true }
+      {
+        "name": "PHP",
+        "details": "server side scripting, database manipulation",
+        "favourite": true
+      },
+      {
+        "name": "JavaScript",
+        "details": "Dynamic pages, AJAX server requests",
+        "favourite": true
+      },
+      { "name": "HTML", "details": "Webpage strcuture" },
+      { "name": "CSS", "details": "Page styling, animations" }
     ]
   },
   {

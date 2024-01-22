@@ -308,7 +308,7 @@ header {
   flex: 1;
 }
 
-.favourite {
+.favourite span:first-child {
   font-weight: bold;
   color: #40939d;
 }
