@@ -64,33 +64,24 @@ header {
   padding-left: 30px;
 }
 
-#projects ul {
-  list-style-type: none;
-  width: 90%;
-  padding-left: 0;
-
-  border-radius: 5px;
-  flex: 1;
-  margin-top: 0px;
-}
-#projects ul li {
+.projects-list-container ul li {
   margin: 0 10px 0 10px;
   margin-top: 15px;
   border-radius: 5px;
   /* box-shadow: 0px 6px 5px -6px rgba(0, 0, 0, 0.53); */
   padding: 15px;
 }
-#projects ul li:first-child {
+.projects-list-container ul li:first-child {
   margin-top: 0;
   padding-top: 0;
 }
-#projects ul li:before {
+.projects-list-container ul li:before {
   content: "🔹";
 }
-#projects ul li:not(:last-child) {
+.projects-list-container ul li:not(:last-child) {
   border-bottom: 1px solid #d8d8d8;
 }
-#projects ul li:last-child {
+.projects-list-container ul li:last-child {
   margin: 0 10px 0 10px;
 }
 .project-container a {
@@ -165,14 +156,14 @@ header {
   display: flex;
   flex-direction: column;
 }
-#skills .skill-list {
+.data-list {
   display: none;
   list-style-type: none;
   width: 90%;
   /* margin: 0 auto; */
-  padding: 0 20px 20px 20px;
   border-radius: 5px;
-  flex: 1;
+  padding: 0 20px 20px 20px;
+  /* flex: 1; */
   margin-top: 0px;
 }
 #skill .list-heading {

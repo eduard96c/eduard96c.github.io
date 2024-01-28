@@ -1,0 +1,30 @@
+[
+  {
+    "type": "Programming",
+    "main": true,
+    "list": [
+      {
+        "name": "DailyOCR",
+        "details": "OCR, PDF tools, SEO tools and more!",
+        "href": "https://dailyocr.com",
+        "favourite": true
+      },
+      {
+        "name": "Blog Template ",
+        "details": "A template of a blog website ",
+        "href": "/blog",
+        "favourite": true
+      },
+      {
+        "name": "Keyword Density Calculator",
+        "href": "https://github.com/fprophet/keywords-density-checker/blob/main",
+        "details": "PHP Class - used to calculate a web page word and keyword"
+      },
+      {
+        "name": " Diet Calculator",
+        "href": "https://github.com/fprophet/Diet-calculator",
+        "details": "JavaScript Project - calories calculator."
+      }
+    ]
+  }
+]

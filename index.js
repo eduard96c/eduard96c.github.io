@@ -63,48 +63,68 @@ async function fetch_json(path) {
 
   return response;
 }
-async function showSkills() {
-  var page_list_section = $("#skills section:last-child");
-  var page_menu_section = $("#skills section:first-child");
-  menu_html = "<ul class='list-select' onclick='_handleListChange(this)'>";
 
-  let skills = [];
+function ucfirst(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
-  skills = await fetch_json("./skills.json");
+function create_list_for_item(item) {
+  var style = "";
+  if (item.main !== undefined) {
+    style = "style='display:block'";
+  }
 
-  skills.forEach(function (category) {
-    style = "";
+  var html = `<ul id='${item.type.toLowerCase()}' class='data-list skill-list' ${style}><h3>${
+    item.type
+  } </h3>`;
+
+  var response = item.list.map(function (data) {
+    fav_class = "";
+    if (data.favourite) {
+      fav_class = "class='favourite'";
+    }
+    if (data.href) {
+      response = `<li ${fav_class}> <a href="${data.href}">${data.name}</a> - <span>${data.details}</span></li>`;
+    } else {
+      response = `<li ${fav_class}> <span>${data.name}</span> - <span>${data.details}</span></li>`;
+    }
+    return response;
+  });
+
+  html += response.join("");
+  html += "</ul>";
+  return html;
+}
+
+function create_menu_for_items(items) {
+  var html = "<ul class='list-select' onclick='_handleListChange(this)'>";
+
+  var response = items.map(function (item) {
     menu_class = "";
-    if (category.main !== undefined) {
-      style = "style='display:block'";
+    if (item.main !== undefined) {
       menu_class = "class='selected-list'";
     }
-
-    menu_html += `<li ${menu_class} data-type='${category.type.toLowerCase()}'>${
-      category.type
-    }</li>`;
-
-    html = `<ul id='${category.type.toLowerCase()}' class='data-list skill-list' ${style}><h3>${
-      category.type
-    } Skills</h3>`;
-
-    var response = category.list.map(function (skill) {
-      fav_class = "";
-      if (skill.favourite) {
-        fav_class = "class='favourite'";
-      }
-      response = `<li ${fav_class}> <span>${skill.name}</span> - <span>${skill.details}</span></li>`;
-      return response;
-    });
-
-    html += response.join("");
-    console.log(response);
-    html += "</ul>";
-
-    page_list_section.innerHTML += html;
+    return `<li ${menu_class} data-type='${item.type.toLowerCase()}'>${item.type}</li>`;
   });
-  menu_html += "</ul>";
-  page_menu_section.innerHTML += menu_html;
+  html += response.join("") + "</ul>";
+  return html;
 }
-showSkills();
+
+async function get_from_json(object) {
+  var page_list_section = $(`#${object} section:last-child`);
+  var page_menu_section = $(`#${object} section:first-child`);
+  let items = [];
+
+  page_menu_section.querySelector("h2").innerHTML = ucfirst(object);
+  items = await fetch_json("./data/" + object + ".json");
+
+  page_menu_section.innerHTML += create_menu_for_list(items);
+
+  items.forEach(function (category) {
+    page_list_section.innerHTML += create_list_for_item(category);
+  });
+}
+
+get_from_json("skills");
+get_from_json("projects");
 nav();
