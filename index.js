@@ -121,7 +121,7 @@ async function get_from_json(object) {
   page_menu_section.innerHTML += create_menu_for_list(items);
 
   items.forEach(function (category) {
-    page_list_section.innerHTML += create_list_for_item(category);
+    page_list_section.innerHTML += create_menu_for_items(category);
   });
 }
 
