@@ -118,10 +118,10 @@ async function get_from_json(object) {
   page_menu_section.querySelector("h2").innerHTML = ucfirst(object);
   items = await fetch_json("./data/" + object + ".json");
 
-  page_menu_section.innerHTML += create_menu_for_list(items);
+  page_menu_section.innerHTML += create_menu_for_items(items);
 
   items.forEach(function (category) {
-    page_list_section.innerHTML += create_menu_for_items(category);
+    page_list_section.innerHTML += create_list_for_item(category);
   });
 }
 
