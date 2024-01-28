@@ -1,0 +1,39 @@
+[
+  {
+    "type": "about",
+    "list": [
+      "Hello! My name is Ciuban Eduard and this is my Web CV. I'm a junior web developer and freelancer and I'm currently creating projects to help develop my coding skills and capabilities.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae magnam repellat ducimus quibusdam, cumque quos? Consequatur molestiae ea beatae minus iure, dolore facilis? Saepe sunt magnam totam tenetur quasi laborum!"
+    ]
+  },
+  {
+    "type": "basic-info",
+    "list": {
+      "age": "28",
+      "email": "<a href='#'> eduard.ciuban96@gmail.com</a>",
+      "phone": "0777777777",
+      "Address": "<span style='font-style:italic'>County, City, Street-Name 25</span>"
+    }
+  },
+  {
+    "type": "social-platforms",
+    "list": [
+      {
+        "link": "https://github.com/eduard96c",
+        "icon": "git fa fa-github"
+      },
+      {
+        "link": "https://github.com/fprophet",
+        "icon": "git fa fa-github"
+      },
+      {
+        "link": "https://linkedin.com/account",
+        "icon": "lk fa fa-linkedin-square"
+      },
+      {
+        "link": "https://Facebook.com/account",
+        "icon": "fb fa fa-facebook-square"
+      }
+    ]
+  }
+]

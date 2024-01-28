@@ -125,6 +125,56 @@ async function get_from_json(object) {
   });
 }
 
+async function get_about() {
+  var content = await fetch_json("./data/about.json");
+  let about_section = $("#about section:first-child");
+  let info_section = $("#about section:last-child");
+  content.forEach(function (item) {
+    switch (item.type) {
+      case "about":
+        about_section.innerHTML += `<h2>${ucfirst(
+          item.type.replace("-", " ")
+        )}</h2>`;
+        item.list.forEach(function (li) {
+          about_section.innerHTML += `<p>${li}</p>`;
+        });
+        break;
+
+      case "basic-info":
+        info_section.innerHTML += `<h2>${ucfirst(
+          item.type.replace("-", " ")
+        )}</h2>`;
+        var html = "<table><tbody>";
+
+        for (var info in item.list) {
+          var row = `<tr><td class="info-key">${ucfirst(
+            info
+          )}:</td><td class="info-value">${item.list[info]}</td></tr>`;
+          html += row;
+        }
+
+        html += "</table></tbody>";
+        info_section.innerHTML += html;
+        break;
+
+      case "social-platforms":
+        info_section.innerHTML += `<h2>${ucfirst(
+          item.type.replace("-", " ")
+        )}</h2>`;
+
+        var html = "<div class='social-buttons'>";
+        item.list.forEach(function (itm) {
+          console.log(itm);
+          html += `<a href='${itm.link}'> <i class='${itm.icon}'></i> ${itm.link}</a>`;
+        });
+        html += "</div>";
+        console.log(html);
+        info_section.innerHTML += html;
+        break;
+    }
+  });
+}
+get_about();
 get_from_json("skills");
 get_from_json("projects");
 nav();
