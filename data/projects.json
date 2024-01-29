@@ -5,25 +5,40 @@
     "list": [
       {
         "name": "DailyOCR",
-        "details": "OCR, PDF tools, SEO tools and more!",
+        "details": [
+          "<p class='item-heading'><b>Ongoing project</b> My biggest and complex project. An online platform with multiple web tools that can help users based on their needs. The project is developed on a remote Apache server using PHP for backend programming and JavaScript for frontend. </p>",
+          "OCR: Optical Character Recognition. Based on Tesseract OCR api my OCR process is done by a C++ script that reqruires certain parameters in order to find the image/pdf and extract it's contents. The process implies adjusting the image to a size so the characters can be read by the API, identify it's DPI, the text recognition and extraction, text layout calculation and creating a Word or TXT file containing the text.",
+          "PDF tools: PDF conversion to image, image conversion to PDF, split PDF into multiple files etc.;",
+          "SEO tools: Keyword density checker (find the density of the most used keywords in a webpage/text input/file), sitemap checker, broken links checker etc.;",
+          "Server tools: Who is?, Domain age checker.",
+          "Blog: A blog with articles related to the subjects our platform is approaching."
+        ],
         "href": "https://dailyocr.com",
         "favourite": true
       },
       {
         "name": "Blog Template ",
-        "details": "A template of a blog website ",
+        "details": [
+          "<p class='item-heading'><b>Ongoing project</b> A blog template similar to the one integrated in the project above. This project is a reflection of my web design capabilities.</p>",
+          "No database records: articles are not stored in a database nor can be created.",
+          "Blog page/article page: the project has 2 pages, a main page and the article page."
+        ],
         "href": "/blog",
         "favourite": true
       },
       {
         "name": "Keyword Density Calculator",
         "href": "https://github.com/fprophet/keywords-density-checker/blob/main",
-        "details": "PHP Class - used to calculate a web page word and keyword"
+        "details": [
+          "<p class='item-heading'> A PHP Class used to calculate a web page's most used keywords density</p>"
+        ]
       },
       {
         "name": " Diet Calculator",
         "href": "https://github.com/fprophet/Diet-calculator",
-        "details": "JavaScript Project - calories calculator."
+        "details": [
+          "<p class='item-heading'> A JavaScript project. A calculator that helps user find the best meals for a diet. Has CRUD record systems for a better customization.</p>"
+        ]
       }
     ]
   }

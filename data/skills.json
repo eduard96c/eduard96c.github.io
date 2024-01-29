@@ -5,26 +5,108 @@
     "list": [
       {
         "name": "PHP",
-        "details": "server side scripting, database manipulation",
+        "details": [
+          "<p class='item-heading'>In concordance with my system skills I can make use of PHP to create an entire web project from scratch. Here are my main key skills of php:</p>",
+          "Server side scripting: from basic system operations like file manipulation to more complex actions like running a process and handling the response;",
+          "Database manipulation: OOP, CRUD operations, simple table relationships, many to many, one to many etc.;",
+          "Client update: using JavaScript I can update pages in real time with backside manipulated data;",
+          "Framewroks: Laravel - on a basic level. I can handle routes, database table creation and migrations;"
+        ],
         "favourite": true
       },
       {
         "name": "JavaScript",
-        "details": "Dynamic pages, AJAX server requests",
+        "details": [
+          "<p class='item-heading'>My main strong skill when it comes to web design. I can create dynamic pages that can enhance user experience and with the help of a server script I can update pages in real time. Here are my main skills: </p>",
+          "Dynamic pages: I can make use of Event Listeners to make page elements react to certain actions and create a good user experience;",
+          "AJAX: using Fetch or XMLHttpRequest APIs I can request a server side script to either GET (user credentials from a database for a log-in) or POST (a user completed form for account creation) data.",
+          "JSON: I can manipulate JSON type files or objects for data storage;",
+          "HTML: I can handle the document methods to create HTML elements for certain purposes like creating a results table for an operation;",
+          "pdf.js: a library with asynchronous methods to handle a PDF document: display/count pages;"
+        ],
         "favourite": true
       },
-      { "name": "HTML", "details": "Webpage strcuture" },
-      { "name": "CSS", "details": "Page styling, animations" }
+      {
+        "name": "C++",
+        "details": [
+          "<p class='item-heading'>I can create intermediate projects with C++</p>",
+          "more skills to be added"
+        ],
+        "favourite": true
+      },
+      {
+        "name": "MySQL",
+        "details": [
+          "<p class='item-heading'>I can create databases for simple applications</p>",
+          "more skills to be added"
+        ],
+        "favourite": true
+      },
+      {
+        "name": "HTML",
+        "details": [
+          "<p class='item-heading'>I can create web pages and with the help of CSS selectors I can make a well structured document easy to understand.</p>"
+        ]
+      },
+      {
+        "name": "CSS",
+        "details": [
+          "<p class='item-heading'>I can create good looking webpages with pure CSS or using frameworks such as Bootsrap. Here are a few CSS aspects I am able to handle:</p>",
+          "Flex boxes: by far the easiest way to style a page. I can create different structures by spliting a container in half or multiple uneven parts;",
+          "Navigation menus: I can create nice looking simple or more complex menus;",
+          "Animations: hover effects, sliders;"
+        ]
+      }
     ]
   },
   {
     "type": "Computers",
     "list": [
-      { "name": "Systems", "details": "test details", "favourite": true }
+      {
+        "name": "Systems",
+        "details": [
+          "<p class='item-heading'>I can work with computers that run on systems like Windows or Linux. Basic usage or more complex operations.</p>",
+          "Install/update system;",
+          "Terminal commands: navigation, file manipulation, run processes, linux bash scripts;"
+        ],
+        "favourite": true
+      },
+      {
+        "name": "Software",
+        "details": [
+          "<p class='item-heading'>I have the knwoledge of using computers softwares for different purposes: system update, drivers for specific hardware, engineering aplications, web aplications.</p>",
+          "more skills to be added",
+          "more skills to be added"
+        ],
+        "favourite": true
+      },
+      {
+        "name": "Hardware",
+        "details": [
+          "<p class='item-heading'>I understand how computer components  work and how to assemble them in order to make a computer boot up.</p>",
+          "Assembly/dissasembly: remove all the computer parts for maintenance purposes such as dust cleaning, thermal paste replacement."
+        ]
+      },
+      {
+        "name": "Server",
+        "details": [
+          "<p class='item-heading'>I can work with computers that run on systems like Windows or Linux. Basic usage or more complex operations.</p>",
+          "more skills to be added",
+          "more skills to be added"
+        ]
+      }
     ]
   },
   {
     "type": "Electronics",
-    "list": [{ "name": "PCB", "details": "test details" }]
+    "list": [
+      {
+        "name": "PCB",
+        "details": [
+          "<p class='item-heading'>I have knowledge and abilities on how to use heating devices such as a ledcon to remove/replace PCB components.</p>",
+          "more skills to be added"
+        ]
+      }
+    ]
   }
 ]

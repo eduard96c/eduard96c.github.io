@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Known languages",
+    "main": true,
+    "list": [
+      {
+        "name": "Romanian",
+        "details": ["Native"],
+        "level": "5"
+      },
+      {
+        "name": "English",
+        "details": ["Profesional"],
+        "level": "4"
+      },
+      {
+        "name": "Hungarian",
+        "level": "1",
+        "details": ["Low Level"]
+      },
+      {
+        "name": "French",
+        "level": "1",
+        "details": ["Low Level"]
+      }
+    ]
+  }
+]

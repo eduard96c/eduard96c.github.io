@@ -26,7 +26,6 @@ function _handleNavClick(e) {
   next_container = document.getElementById(active_page);
 
   if (e.target !== selected) {
-    console.log(current_container);
     current_container.classList.remove("d-flex");
     next_container.classList.add("d-flex");
     selected.classList.remove("selected");
@@ -35,7 +34,6 @@ function _handleNavClick(e) {
 }
 
 function _handleListChange(ev) {
-  console.log(event);
   var page = document.querySelector("#" + active_page);
   if (event.target.nodeName.toLowerCase() == "li") {
     page_lists = page.querySelectorAll(".data-list");
@@ -48,6 +46,7 @@ function _handleListChange(ev) {
     page_lists.forEach(function (pg) {
       pg.style.display = "none";
     });
+    page.querySelector("h3").innerHTML = ucfirst(event.target.dataset.type);
     event.target.classList.add("selected-list");
     page.querySelector("#" + event.target.dataset.type).style.display = "block";
   }
@@ -73,21 +72,37 @@ function create_list_for_item(item) {
   if (item.main !== undefined) {
     style = "style='display:block'";
   }
-
-  var html = `<ul id='${item.type.toLowerCase()}' class='data-list skill-list' ${style}><h3>${
-    item.type
-  } </h3>`;
+  var html = `<ul id='${item.type.toLowerCase()}' class='data-list skill-list' ${style}>`;
 
   var response = item.list.map(function (data) {
-    fav_class = "";
+    fav_class = "class='item-li'";
     if (data.favourite) {
-      fav_class = "class='favourite'";
+      fav_class = "class='item-li favourite'";
     }
+
     if (data.href) {
-      response = `<li ${fav_class}> <a href="${data.href}">${data.name}</a> - <span>${data.details}</span></li>`;
+      response = `<li ${fav_class}> <a href="${data.href}">${data.name}</a> <div class='item-details-list-holder'><ul>`;
     } else {
-      response = `<li ${fav_class}> <span>${data.name}</span> - <span>${data.details}</span></li>`;
+      response = `<li ${fav_class}> <span>${data.name}</span><div class='item-details-list-holder'><ul>`;
     }
+    Array.from(data.details).forEach(function (elem) {
+      if (data.level !== undefined) {
+        response += `<li>`;
+        for (i = 0; i < 5; i++) {
+          if (i < data.level) {
+            response += `<div class='hexagon filled-hexagon'></div>`;
+          } else {
+            response += `<div class='hexagon'></div>`;
+          }
+        }
+        response += `<span>${elem}</span>`;
+        response += `</li>`;
+      } else {
+        response += `<li>${elem}</li>`;
+      }
+    });
+    response += "</ul></div>";
+
     return response;
   });
 
@@ -117,6 +132,13 @@ async function get_from_json(object) {
 
   page_menu_section.querySelector("h2").innerHTML = ucfirst(object);
   items = await fetch_json("./data/" + object + ".json");
+
+  var first_main = items.find((itm) => {
+    if (itm.main !== undefined) {
+      return itm;
+    }
+  });
+  page_list_section.querySelector("h3").innerHTML = first_main.type;
 
   page_menu_section.innerHTML += create_menu_for_items(items);
 
@@ -164,11 +186,9 @@ async function get_about() {
 
         var html = "<div class='social-buttons'>";
         item.list.forEach(function (itm) {
-          console.log(itm);
           html += `<a href='${itm.link}'> <i class='${itm.icon}'></i> ${itm.link}</a>`;
         });
         html += "</div>";
-        console.log(html);
         info_section.innerHTML += html;
         break;
     }
@@ -177,4 +197,5 @@ async function get_about() {
 get_about();
 get_from_json("skills");
 get_from_json("projects");
+get_from_json("languages");
 nav();
