@@ -135,6 +135,7 @@ header {
 #main {
   flex: 3;
   display: flex;
+  align-items: center;
 }
 .list-select {
   list-style-type: none;
@@ -271,7 +272,7 @@ header {
   display: none;
   flex: 1;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
-  max-height: 430px;
+  height: 450px;
   overflow: auto;
 }
 
