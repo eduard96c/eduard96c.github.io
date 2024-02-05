@@ -1,0 +1,38 @@
+[
+  {
+    "type": "Former Education",
+    "main": true,
+    "list": [
+      {
+        "name": "High School",
+        "details": [
+          "<p class='item-heading'>2011 - 2015</p>",
+          "<span class='bolded'>Institution</span>: Liceul Teoretic Borsa",
+          "<span class='bolded'>Location</span>: Maramures, Borsa",
+          "<span class='bolded'>Profile</span>: Mathematics-Informatics"
+        ]
+      },
+      {
+        "name": "College",
+        "details": [
+          "<p class='item-heading'>2016 - 2020</p>",
+          "<span class='bolded'>Degree</span>: Bachelor",
+          "<span class='bolded'>Institution</span>: Theoretical University of Cluj-Napoca",
+          "<span class='bolded'>Location</span>: Cluj, Cluj-Napoca",
+          "<span class='bolded'>Profile</span>: Electrical Engineering",
+          "<span class='bolded'>Thesis</span>: Numerical Modeling Analysis of a Three Phased IGBT Device"
+        ]
+      },
+      {
+        "name": "Masters",
+        "details": [
+          "<p class='item-heading'>2020 - 2022</p>",
+          "<span class='bolded'>Degree</span>: Masters",
+          "<span class='bolded'>Institution</span>: Theoretical University of Cluj Napoca",
+          "<span class='bolded'>Location</span>: Cluj, Cluj-Napoca",
+          "<span class='bolded'>Profile</span>: Modern and computer assisted technical design in electrical engineering"
+        ]
+      }
+    ]
+  }
+]

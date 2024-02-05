@@ -7,7 +7,7 @@
         "name": "DailyOCR",
         "details": [
           "<p class='item-heading'><b>Ongoing project</b> My biggest and complex project. An online platform with multiple web tools that can help users based on their needs. The project is developed on a remote Apache server using PHP for backend programming and JavaScript for frontend. </p>",
-          "OCR: Optical Character Recognition. Based on Tesseract OCR api my OCR process is done by a C++ script that reqruires certain parameters in order to find the image/pdf and extract it's contents. The process implies adjusting the image to a size so the characters can be read by the API, identify it's DPI, the text recognition and extraction, text layout calculation and creating a Word or TXT file containing the text.",
+          "OCR: Optical Character Recognition. Based on Tesseract OCR api my OCR process is done by a C++ script that requires certain parameters in order to find the image/pdf and extract it's contents. The process implies adjusting the image to a size so the characters can be read by the API, identify it's DPI, the text recognition and extraction, text layout calculation and creating a Word or TXT file containing the text.",
           "PDF tools: PDF conversion to image, image conversion to PDF, split PDF into multiple files etc.;",
           "SEO tools: Keyword density checker (find the density of the most used keywords in a webpage/text input/file), sitemap checker, broken links checker etc.;",
           "Server tools: Who is?, Domain age checker.",

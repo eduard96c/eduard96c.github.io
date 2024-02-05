@@ -46,7 +46,9 @@ function _handleListChange(ev) {
     page_lists.forEach(function (pg) {
       pg.style.display = "none";
     });
-    page.querySelector("h3").innerHTML = ucfirst(event.target.dataset.type);
+    page.querySelector("h3").innerHTML = ucfirst(
+      event.target.dataset.type.replace("-", " ")
+    );
     event.target.classList.add("selected-list");
     page.querySelector("#" + event.target.dataset.type).style.display = "block";
   }
@@ -72,7 +74,9 @@ function create_list_for_item(item) {
   if (item.main !== undefined) {
     style = "style='display:block'";
   }
-  var html = `<ul id='${item.type.toLowerCase()}' class='data-list skill-list' ${style}>`;
+  var html = `<ul id='${item.type
+    .toLowerCase()
+    .replace(" ", "-")}' class='data-list skill-list' ${style}>`;
 
   var response = item.list.map(function (data) {
     fav_class = "class='item-li'";
@@ -83,7 +87,7 @@ function create_list_for_item(item) {
     if (data.href) {
       response = `<li ${fav_class}> <a href="${data.href}">${data.name}</a> <div class='item-details-list-holder'><ul>`;
     } else {
-      response = `<li ${fav_class}> <span>${data.name}</span><div class='item-details-list-holder'><ul>`;
+      response = `<li ${fav_class}> <span  class='item-span'>${data.name}</span><div class='item-details-list-holder'><ul>`;
     }
     Array.from(data.details).forEach(function (elem) {
       if (data.level !== undefined) {
@@ -119,7 +123,7 @@ function create_menu_for_items(items) {
     if (item.main !== undefined) {
       menu_class = "class='selected-list'";
     }
-    return `<li ${menu_class} data-type='${item.type.toLowerCase()}'>${item.type}</li>`;
+    return `<li ${menu_class} data-type='${item.type.toLowerCase().replace(" ", "-")}'>${item.type}</li>`;
   });
   html += response.join("") + "</ul>";
   return html;
@@ -194,8 +198,10 @@ async function get_about() {
     }
   });
 }
+
 get_about();
 get_from_json("skills");
 get_from_json("projects");
 get_from_json("languages");
+get_from_json("education");
 nav();
